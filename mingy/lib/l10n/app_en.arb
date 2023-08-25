@@ -1,0 +1,8 @@
+{
+  "appTitle": "Mingy",
+  "pagetTitle": "Mingy Home Page",
+  "tapCountLabel": "You have pushed the button this many times:",
+  "@pageTitle": {
+    "description": "Title of the home page"
+  }
+}

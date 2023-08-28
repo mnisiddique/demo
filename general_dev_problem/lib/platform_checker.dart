@@ -2,17 +2,6 @@ import 'dart:io';
 
 import 'package:get_it/get_it.dart';
 
-enum TargetPlatform implements PlatformMatcher {
-  android(AndroidMatcher()),
-  iOS(IosMatcher());
-
-  final PlatformMatcher matcher;
-  const TargetPlatform(this.matcher);
-
-  @override
-  bool get isMatched => matcher.isMatched;
-}
-
 class DemoDeps {}
 
 // What do I want?

@@ -33,7 +33,7 @@ class MobileNumberInput extends UserInput {
   const MobileNumberInput.dirty(String value) : super.dirty(value);
 
   @override
-  List<InputError> get errorSpecs => [
+  List<InputError> get errors => [
         _MobileNoAreaCodeError(r'^(01[3-9])'),
         _MobileNoLengthError(r'^.{11}$'),
         _MobileNoInvalidError(r'^(01[3-9])([0-9]){8}$'),

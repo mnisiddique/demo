@@ -26,13 +26,15 @@ abstract class UserInput extends FormzInput<String, InputError> {
   const UserInput.pure() : super.pure('');
   const UserInput.dirty(String value) : super.dirty(value);
 
-  List<InputError> get errorSpecs;
+  /// Validation will fail if any of the error
+  /// from the list exists
+  List<InputError> get errors;
 
   @override
   InputError? validator(String value) {
     try {
-      return errorSpecs.firstWhere(
-        (errSpec) => errSpec.doesExist(value),
+      return errors.firstWhere(
+        (err) => err.doesExist(value),
       );
     } on StateError {
       return null;

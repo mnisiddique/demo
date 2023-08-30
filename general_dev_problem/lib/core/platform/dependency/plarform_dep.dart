@@ -1,4 +1,3 @@
-import 'package:flutter/foundation.dart';
 import 'package:get_it/get_it.dart';
 import 'package:platform_dependency/core/platform/dependency/android_dep.dart';
 import 'package:platform_dependency/core/platform/dependency/dep.dart';
@@ -12,8 +11,6 @@ class PlatformDependency {
       IosDepImpl(getIt),
     ];
 
-    final currentPlatformSpec = CurrentPlatformSpec(defaultTargetPlatform);
-
     PlatformDepInitilizer initializer = PlatformDepInitilizer(
       deps: deps,
       spec: currentPlatformSpec,
@@ -22,3 +19,7 @@ class PlatformDependency {
     await initializer.initialize();
   }
 }
+
+// TODO: Test 1: dependency that exist only for android and not for iOS
+// TODO: Test 2: dependency that exist only for ios and not for android
+// TODO: Test 3: dependency that exist both for ios and android

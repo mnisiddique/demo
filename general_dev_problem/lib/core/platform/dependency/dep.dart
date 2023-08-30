@@ -1,7 +1,6 @@
-import 'package:flutter/foundation.dart';
 import 'package:get_it/get_it.dart';
 
-import 'platform_spec.dart';
+import '../platform_spec.dart';
 
 /// Dep is short for dependency. depncy
 /// Dep aims to generalize any dependency initialization.
@@ -19,24 +18,8 @@ abstract class PlatformDep extends Dep with PlatformSetting {
   PlatformDep(this.getIt);
 }
 
-/// Convenient type so that, we can ommit setting
-/// common target over and over again
-abstract class AndroidDep extends PlatformDep {
-  AndroidDep(super.getIt);
-
-  @override
-  TargetPlatform get targetPlatform => TargetPlatform.android;
-}
-
-/// Convenient type so that, we can ommit setting
-/// common target over and over again
-abstract class IosDep extends PlatformDep {
-  IosDep(super.getIt);
-
-  @override
-  TargetPlatform get targetPlatform => TargetPlatform.iOS;
-}
-
+/// Initilizes a list of platform dependency
+/// based on given platform-specification
 class PlatformDepInitilizer implements Dep {
   final PlatformSpec spec;
   final List<PlatformDep> deps;
@@ -52,8 +35,3 @@ class PlatformDepInitilizer implements Dep {
     await Future.wait(currPlatformDep.map((dep) => dep.initialize()));
   }
 }
-
-
-// android_dep.dart
-// ios_dep.dart
-// platform_dep.dart

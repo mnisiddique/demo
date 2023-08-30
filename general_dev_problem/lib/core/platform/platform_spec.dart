@@ -24,5 +24,6 @@ class CurrentPlatformSpec implements PlatformSpec {
   }
 }
 
+/// convenient method for accessing current platform spec
 CurrentPlatformSpec get currentPlatformSpec =>
     CurrentPlatformSpec(defaultTargetPlatform);

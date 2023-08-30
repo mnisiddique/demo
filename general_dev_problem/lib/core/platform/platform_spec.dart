@@ -23,3 +23,6 @@ class CurrentPlatformSpec implements PlatformSpec {
     return setting.targetPlatform == currentPlatform;
   }
 }
+
+CurrentPlatformSpec get currentPlatformSpec =>
+    CurrentPlatformSpec(defaultTargetPlatform);

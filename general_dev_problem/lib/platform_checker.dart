@@ -1,7 +1,5 @@
 import 'dart:io';
 
-import 'package:get_it/get_it.dart';
-
 class DemoDeps {}
 
 // What do I want?

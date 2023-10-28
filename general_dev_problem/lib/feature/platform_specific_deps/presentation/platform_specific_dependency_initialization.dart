@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:platform_dependency/core/platform/platform_filter.dart';
 import 'package:platform_dependency/core/presentation/navigation/route_builder.dart';
 
 class PlatformSpecificDependencyRoute extends RouteBuilder {

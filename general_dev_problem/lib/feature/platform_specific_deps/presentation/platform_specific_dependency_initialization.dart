@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:platform_dependency/core/presentation/navigation/route_builder.dart';
+import 'package:platform_dependency/feature/platform_specific_deps/presentation/example_stateful_widget_without_casting.dart';
+import 'package:platform_dependency/feature/platform_specific_deps/presentation/example_widget_with_casting.dart';
+import 'package:platform_dependency/feature/platform_specific_deps/presentation/example_widget_without_casting.dart';
 
 class PlatformSpecificDependencyRoute extends RouteBuilder {
   @override
@@ -18,17 +21,15 @@ class DemoDepsScreen extends StatelessWidget {
         title: const Text("Dependency demo"),
       ),
       body: const Center(
-        child: Text("Under Development"),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            ExampleWidgetWithCasting(),
+            ExampleWidgetWihoutCasting(),
+            StatefulPlatformTextExample(),
+          ],
+        ),
       ),
     );
-  }
-}
-
-class TextWidget extends StatelessWidget {
-  const TextWidget({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const Text("Android Text");
   }
 }

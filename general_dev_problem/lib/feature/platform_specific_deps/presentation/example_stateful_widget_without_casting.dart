@@ -46,7 +46,7 @@ class _StatefullIOSTextState extends State<StatefullIOSText> {
   @override
   Widget build(BuildContext context) {
     const String dayNo = "1";
-
+// Tests switch expression.
     String day = switch (dayNo) {
       "1" => "Staturday",
       "2" => "Sunday",
@@ -57,4 +57,3 @@ class _StatefullIOSTextState extends State<StatefullIOSText> {
     return const Text("IOS Statefull Text Widget");
   }
 }
-

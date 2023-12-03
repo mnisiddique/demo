@@ -45,6 +45,16 @@ class StatefullIOSText extends BasePlatformStatefullWidget with PlatformAimIOS {
 class _StatefullIOSTextState extends State<StatefullIOSText> {
   @override
   Widget build(BuildContext context) {
+    const String dayNo = "1";
+
+    String day = switch (dayNo) {
+      "1" => "Staturday",
+      "2" => "Sunday",
+      _ => "Monday",
+    };
+    debugPrint(day);
+
     return const Text("IOS Statefull Text Widget");
   }
 }
+

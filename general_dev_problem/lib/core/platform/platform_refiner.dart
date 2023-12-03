@@ -8,18 +8,18 @@ import 'package:flutter/foundation.dart';
 ///  act as default [PlatformSpec]
 
 /// sets platform aim for any object.
-abstract class PlatformAim {
+abstract mixin class PlatformAim {
   TargetPlatform get platformAimed;
 }
 
 /// sets iOS as platform aim for any object.
-class PlatformAimIOS implements PlatformAim {
+mixin class PlatformAimIOS implements PlatformAim {
   @override
   TargetPlatform get platformAimed => TargetPlatform.iOS;
 }
 
 /// sets Android as platform aim for any object.
-class PlatformAimAndroid implements PlatformAim {
+mixin class PlatformAimAndroid implements PlatformAim {
   @override
   TargetPlatform get platformAimed => TargetPlatform.android;
 }

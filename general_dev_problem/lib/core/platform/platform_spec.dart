@@ -2,7 +2,7 @@ import 'package:flutter/foundation.dart';
 
 /// To make any class platform specific
 /// by forcing it to set its target platform
-abstract class PlatformSetting {
+abstract mixin class PlatformSetting {
   TargetPlatform get targetPlatform;
 }
 

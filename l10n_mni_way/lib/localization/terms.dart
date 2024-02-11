@@ -60,4 +60,12 @@ class Term {
     "Home",
     "প্রথম যবনিকা",
   );
+  static const bangla = Term._(
+    "Bangla",
+    "বাংলা",
+  );
+  static const english = Term._(
+    "English",
+    "ইংলিশ",
+  );
 }

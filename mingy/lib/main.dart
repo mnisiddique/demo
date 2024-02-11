@@ -103,7 +103,7 @@ class CamelCaseConverter {
     String outPut = "";
     for (String word in words) {
       word = word.trim();
-      if (!word.isEmpty) {
+      if (word.isNotEmpty) {
         outPut = "$outPut${word.capitalize()}";
       }
     }

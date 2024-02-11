@@ -22,7 +22,6 @@ class _InputValidationScreenState extends State<InputValidationScreen> {
   MobileNumberInput input = const MobileNumberInput.pure();
   @override
   Widget build(BuildContext context) {
-    print(input.isPure);
     return Scaffold(
       appBar: AppBar(
         title: const Text("Input Validation Demo"),

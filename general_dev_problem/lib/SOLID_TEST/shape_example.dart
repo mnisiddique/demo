@@ -28,6 +28,7 @@ class Square extends Rectangle {
 }
 
 void printArea(Shape shape) {
+  // ignore: avoid_print
   print("${shape.runtimeType}'s area: ${shape.getArea()}");
 }
 
@@ -38,3 +39,6 @@ void main() {
   printArea(rect);
   printArea(square);
 }
+
+// To run this file
+// dart run shape_example.dart
